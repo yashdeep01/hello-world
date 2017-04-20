@@ -22,8 +22,8 @@ int main()
     printf("This is a palindrome\n");
   else
     printf("Not a palindome\n");
-
-  free(str);
+    
+  
   return 0;
 }
 

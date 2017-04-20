@@ -6,14 +6,13 @@ int isPalindrome(char str[]);
 
 int main()
 {
-  int n;
-  scanf("%d",&n);
-  char str[n];
+  printf("Enter a string :\n");
+  char str[255];
   scanf("%s",str);
   if(isPalindrome(str))
-    printf("This is a palindrome");
+    printf("This is a palindrome\n");
   else
-    printf("Not a palindome");
+    printf("Not a palindome\n");
   return 0;
 }
 

@@ -3,6 +3,7 @@
 #include<string.h>
 
 int isPalindrome(char *str);
+void reverse(char *str);
 
 int main()
 {
@@ -18,8 +19,13 @@ int main()
 
   scanf("%s",str);
 
+  reverse(str);
+  printf("%s\n",str);
+
   if(isPalindrome(str))
-    printf("This is a palindrome\n");
+  {
+      printf("This is a palindrome\n");
+  }
   else
     printf("Not a palindome\n");
 
@@ -36,4 +42,15 @@ int isPalindrome(char *str)
       return 0;
 
   return 1;
+}
+void reverse(char *str)
+{
+    int i,j,len = strlen(str);
+    char temp;
+    for(i=0,j=len-1;i<=len/2;i++,j--)
+    {
+        temp = *(str+i);
+        *(str+i) = *(str+j);
+        *(str+j) = temp;
+    }
 }
